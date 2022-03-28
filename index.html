@@ -2,8 +2,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Як підключити Visual Studio Code + GitHub</title>
-<!--Style CSS-->
-<script>src="js/clock1.js" </script>
+
+<script>
+    window.onload = function() {
+    setInterval(clockPainting, 1000);
+    }
+    </script>
+    <!-- =======LOGIN============= -->
 <script type="text/javascript">
     function send()
     {var valid=true;
@@ -23,24 +28,23 @@
     }
     }
 </script>
+<!--Style CSS-->
 <style>
     .shadowtext { text-shadow: 1px 3px 2px white, 0 0 1em red;
         color: #210042;
         font-size: 2em;
     }
-    <!-- ==================== -->
+    
 </style>
-<script>
-window.onload = function() {
-setInterval(clockPainting, 1000);}
-</script>
+
+
 </head>
 <!--Додаємо фон -->
 <body background="images/bg.jpg">
 <table border="1" align="center" cellpadding="10">
     <tr>
-        <td background="images/bg-3.jpg" colspan="2" height="150" align="right"> 
-            <font size="5" align="center" color="Maroon"> <h1 class="shadowtext"> <a href="https://www.youtube.com/watch?v=KiMtkJw-4gs">Visual Studio Code + GitHub</a></h1></font></td></td>
+        <td background="images/bg-3.jpg" colspan="2" height="150" align="right">
+            <font size="5" align="center" color="Maroon"> <img src="images/vscode.png" height="50%" width="" align="left"> <h1 class="shadowtext"> <a href="https://www.youtube.com/watch?v=KiMtkJw-4gs">Visual Studio Code + GitHub</a></h1></font></td></td>
     <tr>
         <td colspan="2">
             <font size="4"<b>
@@ -53,8 +57,15 @@ setInterval(clockPainting, 1000);}
         </td>
     <tr>
         <td width="30%" valign="top" >
-
+            <!-- clock widget start -->
+  <!-- часи -->
+            <script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href","https://s.bookcdn.com//css/cl/bw-cl-180x170r9.css?v=0.0.1"); document.getElementsByTagName("head")[0].appendChild(css_file); </script> <div id="tw_19_652289509"><div style="width:120px; height:140px; margin: 0 auto;"><a href="https://hotelmix.com.ua/time/rivne-36729">Рівне</a><br/></div></div> <script type="text/javascript"> function setWidgetData_652289509(data){ if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = ''; var params = data.results[i]; objMainBlock = document.getElementById('tw_'+params.widget_type+'_'+params.widget_id); if(objMainBlock !== null) objMainBlock.innerHTML = params.html_code; } } } var clock_timer_652289509 = -1; widgetSrc = "https://widgets.booked.net/time/info?ver=2;domid=;type=19;id=652289509;scode=124;city_id=36729;wlangid=29;mode=2;details=0;background=ffffff;border_color=ffffff;color=008bf5;add_background=ffffff;add_color=333333;head_color=ffffff;border=0;transparent=0"; var widgetUrl = location.href; widgetSrc += '&ref=' + widgetUrl; var wstrackId = ""; if (wstrackId) { widgetSrc += ';wstrackId=' + wstrackId + ';' } var timeBookedScript = document.createElement("script"); timeBookedScript.setAttribute("type", "text/javascript"); timeBookedScript.src = widgetSrc; document.body.appendChild(timeBookedScript); </script>
+<!-- clock widget end -->
+<!-- часи
+            <script>src="js/clock1.js" </script>
             <center><canvas id="canvas" height="120" width="120"</canvas> </center>
+  -->
+                
                 <hr>
             <font size="5" color="navy"><h2>News</h2></font>
             <font size="5">
@@ -96,6 +107,26 @@ setInterval(clockPainting, 1000);}
                 </form>
                 <hr>
 
+                <div id="shim">shim for font face</div>
+
+                <h1>HTML5 Pacman</h1>
+                            
+                <div id="pacman"></div>
+                <script src="js/pacman.js"></script>
+                <script src="js/modernizr-1.5.min.js"></script>
+              
+                <script>
+              
+                  var el = document.getElementById("pacman");
+              
+                  if (Modernizr.canvas && Modernizr.localstorage && 
+                      Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
+                    window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
+                  } else { 
+                    el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
+                      "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+                  }
+                </script>
 
 
 
@@ -142,6 +173,28 @@ setInterval(clockPainting, 1000);}
     <font size="4"> Site Dima T.</font></td>
     </tr>
 </table>
-        <!--<a>https://www.youtube.com/watch?v=KiMtkJw-4gs</a>-->
+<style type="text/css">
+    @font-face {
+      font-family: 'BDCartoonShoutRegular';
+      src: url('BD_Cartoon_Shout-webfont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    #pacman {
+      height:450px;
+      width:342px;
+      margin:20px auto;
+    }
+    #shim { 
+      font-family: BDCartoonShoutRegular; 
+      position:absolute;
+      visibility:hidden
+    }
+    h1 { font-family: BDCartoonShoutRegular; text-align:left; }
+    body { width:100%; margin:0px auto; font-family:sans-serif; }
+    a { text-decoration:none; }
+  </style>
+
+<!--<a>https://www.youtube.com/watch?v=KiMtkJw-4gs</a>-->
 </body>
 </html>
