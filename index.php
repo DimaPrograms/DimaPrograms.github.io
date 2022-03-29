@@ -2,12 +2,18 @@
 <head>
 <meta charset="UTF-8">
 <title>Як підключити Visual Studio Code + GitHub</title>
-<!--Style CSS-->
+
+ <!--   <script>
+    window.onload = function() {
+    setInterval(clockPainting, 1000);
+    }
+    </script> -->
+    <!-- =======LOGIN============= -->
 <script type="text/javascript">
     function send()
-    {var valid=true;
+    { var valid=true;
     var elems=document.forms[0].elements;
-    for (var i=0; i=document.forms[0].length; i++){
+    for (var i=0; i<document.forms[0].length; i++){
         if (elems[i].getAttribute('type') == 'text' ||
         elems[i].getAttribute('type') == 'password' ||
         elems[i].getAttribute('type') == 'email') {
@@ -16,26 +22,30 @@
                 valid = false;
             }
         }
-    } if (!valid){
-        alert('Enter all string!');
+    } 
+    if (!valid){
+        alert('Заповніть всі поля!');
         return false;
     }
     }
 </script>
+<!--Style CSS-->
 <style>
     .shadowtext { text-shadow: 1px 3px 2px white, 0 0 1em red;
-        color: #210042;
+        color: #460aeb;
         font-size: 2em;
     }
-    <!-- ==================== -->
+    
 </style>
+
+
 </head>
 <!--Додаємо фон -->
 <body background="images/bg.jpg">
 <table border="1" align="center" cellpadding="10">
     <tr>
-        <td background="images/bg-3.jpg" colspan="2" height="150" align="right"> 
-            <font size="5" align="center" color="Maroon"> <h1 class="shadowtext"> <a href="https://www.youtube.com/watch?v=KiMtkJw-4gs">Visual Studio Code + GitHub</a></h1></font></td></td>
+        <td background="images/bg-3.jpg" colspan="2" height="150" align="right">
+            <font size="5" align="center" color="Maroon"> <img src="images/vscode.png" height="50%" width="" align="left"> <h1 class="shadowtext"> <a href="https://www.youtube.com/watch?v=KiMtkJw-4gs">Visual Studio Code + GitHub</a></h1></font></td></td>
     <tr>
         <td colspan="2">
             <font size="4"<b>
@@ -48,8 +58,15 @@
         </td>
     <tr>
         <td width="30%" valign="top" >
-
+            <!-- clock widget start -->
+  <!-- часи -->
+            <script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href","https://s.bookcdn.com//css/cl/bw-cl-180x170r9.css?v=0.0.1"); document.getElementsByTagName("head")[0].appendChild(css_file); </script> <div id="tw_19_652289509"><div style="width:120px; height:140px; margin: 0 auto;"><a href="https://hotelmix.com.ua/time/rivne-36729">Рівне</a><br/></div></div> <script type="text/javascript"> function setWidgetData_652289509(data){ if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = ''; var params = data.results[i]; objMainBlock = document.getElementById('tw_'+params.widget_type+'_'+params.widget_id); if(objMainBlock !== null) objMainBlock.innerHTML = params.html_code; } } } var clock_timer_652289509 = -1; widgetSrc = "https://widgets.booked.net/time/info?ver=2;domid=;type=19;id=652289509;scode=124;city_id=36729;wlangid=29;mode=2;details=0;background=ffffff;border_color=ffffff;color=008bf5;add_background=ffffff;add_color=333333;head_color=ffffff;border=0;transparent=0"; var widgetUrl = location.href; widgetSrc += '&ref=' + widgetUrl; var wstrackId = ""; if (wstrackId) { widgetSrc += ';wstrackId=' + wstrackId + ';' } var timeBookedScript = document.createElement("script"); timeBookedScript.setAttribute("type", "text/javascript"); timeBookedScript.src = widgetSrc; document.body.appendChild(timeBookedScript); </script>
+<!-- clock widget end -->
+<!-- часи
+            <script>src="js/clock1.js" </script>
             <center><canvas id="canvas" height="120" width="120"</canvas> </center>
+  -->
+                
                 <hr>
             <font size="5" color="navy"><h2>News</h2></font>
             <font size="5">
@@ -64,42 +81,64 @@
             </font>
             <hr>
                 <h1 align="center"><font color="green">Registration</font></h1>
-                <form action="forma.php" method="post" onsubmit="return send();">
+                <form action="forma.php" method="post" onsubmit=" return send();">
                 <table align="center" bgcolor="#ccc">
                 <TR>
-                    <td><font color="green" First name<font>: </td>
+                    <td><font color="green"> Прізвище</font>: </td>
                     <td><input type="text" size="10" maxlength="20" name="name2" </td>
                 </TR> 
                 <TR>
-                    <td><font color="green" Last name<font>: </td>
+                    <td><font color="green"> І'мя</font>: </td>
                     <td><input type="text" size="10" maxlength="20" name="name1" </td>
                 </TR>
                 <TR>
-                    <td><font color="green" E-mail<font>: </td>
+                    <td><font color="green"> E-mail</font>: </td>
                     <td><input type="text" size="10" maxlength="20" name="email" </td>
                 </TR>
                 <TR>
-                    <td><font color="green" Password<font>: </td>
+                    <td><font color="green"> Пароль</font>: </td>
                     <td><input type="text" size="10" maxlength="20" name="password" </td>
                 </TR> 
                 </table>
 
                 <p align="center">
-                    <input type="submit" value="Registration">
-                    <input type="reset" value="clear">                    
+                    <input type="submit" value="Зареєструвати">
+                    <input type="reset" value="Очистити">                    
                 </p>
                 </form>
                 <hr>
 
+                <div id="shim">shim for font face</div>
+
+                <h1>HTML5 Pacman</h1>
+                            
+                <div id="pacman"></div>
+                <script src="js/pacman.js"></script>
+                <script src="js/modernizr-1.5.min.js"></script>
+              
+                <script>
+              
+                  var el = document.getElementById("pacman");
+              
+                  if (Modernizr.canvas && Modernizr.localstorage && 
+                      Modernizr.audio && (Modernizr.audio.ogg || Modernizr.audio.mp3)) {
+                    window.setTimeout(function () { PACMAN.init(el, "./"); }, 0);
+                  } else { 
+                    el.innerHTML = "Sorry, needs a decent browser<br /><small>" + 
+                      "(firefox 3.6+, Chrome 4+, Opera 10+ and Safari 4+)</small>";
+                  }
+                </script>
 
 
 
 
         </td>
         <td width="70%"> <p>Зробити сайт з нами легко</p>
+
    <p>Створення власного сайту - це не тільки прерогатива великого бізнесу. Інтернет відкриває широкі можливості в першу чергу для малого бізнесу, для приватної підприємницької ініціативи. Адже, при започаткуванні власної справи розробка сайту потребує зовсім невеликих інвестицій, у порівнянні з іншими видами витрат. Створити сайт, в більшості випадків - це значно дешевше, наприклад, ніж оренда офісу, чи витрати на зарплату працівників.</p>
 
 <p>Якщо Вам потрібно якісно створити сайт, який максимально буде відповідати своєму призначенню, то Ви завітали за вірною адресою!</p>
+<h3 align="left"><font color="blue"><a href="https://w3schoolsua.github.io/html/index.html" target="_blank">> GitHub . українською<br></a></font></h3>
 
 <p>Наша вебстудія допоможе, якщо Вам потрібно:</p>
 <ul>
@@ -131,12 +170,42 @@
 <p>(картинка graphic.jpg)Важливим напрямком діяльності нашої вебстудії є також технічна і інформаційна підтримка сайтів. Адже мало просто зробити сайт. Щоб зацікавити відвідувача, створений сайт має підтримувати свій контент у свіжому і актуальному стані, а також в разі потреби оновлювати свої сервіси і функціональний зміст. Крім того, не слід забувати і про пошукову оптимізацію сайту (SEO), завдяки якій сайт отримує гарне взаєморозуміння із провідними пошуковими системами. Відвідувачі, які прийшли на сайт з пошукових машин, є для сайту найціннішими. Вони вже сформулювали свої інтереси і намагаються знайти інформацію на потрібну для них тему. Саме тому дуже важливо направити на сайт відвідувачів з пошукових систем, які задають цільові фрази, що стосуються Вашого бізнесу. Тож задача пошукової оптимізації - просування сайту в верхні рядки результатів пошукових систем за ключовими словами, які шукає користувач. Це дає гарну можливість привернути увагу до сайту з боку великої кількості зацікавлених відвідувачів.</p>
 
 <p>Звертайтесь до веб-студії Web-DECO, і ми з радістю застосуємо свої здібності і досвід для вирішення Ваших задач! Ми можемо створити сайт, який стане для Вас вдалою інвестицією.</p>
-        </td>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3l0SHPlw0-8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<img src="images/poday-renke-ukraine.jpg" height="300px" width="" align="top" hspan="15" vspace="5">
+<p>Ну і звісно трішки хорошого жарту в такий складний для країни час</p><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4SHsSYFwyZI?start=96" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!--
+<img src="images/podaj-reke-ukrainie-03.png" height="140" width="" align="left" hspan="15" vspace="5">
+-->
+</td>
     </tr>
     <td background="images/bg-3.jpg" colspan="2" align="center" valign="middle" height="90"><a href="https://www.youtube.com/watch?v=KiMtkJw-4gs">Як підключити Visual Studio Code + GitHub<br></a>
-    <font size="4"> Site Dima T.</font></td>
+    <font size="4"> <a href="https://youtu.be/HuLeehnGC0s" target="_blank">>>Доброго вечора ми з України<br></a></font></td> 
     </tr>
 </table>
-        <!--<a>https://www.youtube.com/watch?v=KiMtkJw-4gs</a>-->
+<style type="text/css">
+    @font-face {
+      font-family: 'BDCartoonShoutRegular';
+      src: url('BD_Cartoon_Shout-webfont.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    #pacman {
+      height:450px;
+      width:342px;
+      margin:20px auto;
+    }
+    #shim { 
+      font-family: BDCartoonShoutRegular; 
+      position:absolute;
+      visibility:hidden
+    }
+    h1 { font-family: BDCartoonShoutRegular; text-align:left; }
+    body { width:100%; margin:0px auto; font-family:sans-serif; }
+    a { text-decoration:none; }
+  </style>
+
+<!--<a>https://www.youtube.com/watch?v=KiMtkJw-4gs</a>-->
 </body>
 </html>

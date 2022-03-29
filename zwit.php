@@ -93,14 +93,30 @@
         </td>
         <td width="70%" valign='top'> 
         <h1 align="center">Дякуємо за реєстрацію! </h1>
+        
+        <h1 align="center">Список зареєстрованих!</h1>;
+        <table align="center" border="1" width="600">
+        <tr>
+        <td align="center" <b>Прізвище</b></td>
+        <td align="center" <b>Ім'я</b></td>
+        <td align="center" <b>email</b></td>
+        <td align="center" <b>пароль</b></td>
+        </tr>
         <?php
-        $st = $_POST['name2'].";".$_POST['name1'].";".$_POST['email'].";".$_POST['password']."\n";
-        $fp = fopen("baza.txt", "a");
-        $test = fwrite($fp,$st);
-        echo "<h2 align='center'> Ви ввели:".$_POST['name2'].",".$_POST['name1'].",".$_POST['email'].",".$_POST['password']."</h2>";
+        $data=file("baza.txt");
+        foreach($data as $line) {
+            $trs=explode(";",$line);
+                 echo '<tr>';
+            echo '<td>'.$trs[0].'</td>';
+            echo '<td>'.$trs[1].'</td>';
+            echo '<td>'.$trs[2].'</td>';
+            echo '<td>'.$trs[3].'</td>';
+                 echo '<tr>';
+        }
         ?>
+        </table>';
         ЧОМУ ЗАКРИВАЄТЬСЯ ТЕГ H1 А ДЕ ВІДКРИТТЯ "19 роздіЛ" ?! ФОРМІ РЕЄСТРАЦІЇ ПОМИЛКА тег H1 </h1>
-        ТАКОЖ ПОМИЛКА В КОДІ ПОТРІБНО ВІДКРИВАТИ В РЕДАКТОРІ (пРОБАЧТЕ АЛЕ ПОГАНИЙ У ВАС КОПІПАСТ):
+        ТАКОЖ ПОМИЛКА В КОДІ ПОТРІБНО ВІДКРИВАТИ В РЕДАКТОРІ (ПРОБАЧТЕ АЛЕ ПОГАНИЙ У ВАС КОПІПАСТ):
         <h1 align="center"><font color="green">Registration</font></h1>
                 <form action="forma.php" method="post" onsubmit=" return send();">
                 <table align="center" bgcolor="#ccc">
@@ -108,7 +124,7 @@
         </td>
     </tr>
     <td background="images/bg-3.jpg" colspan="2" align="center" valign="middle" height="90"><a href="https://www.youtube.com/watch?v=KiMtkJw-4gs">Як підключити Visual Studio Code + GitHub<br></a>
-    <font size="4"> Site Dima T.</font></td>
+    <font size="4"> Site </font></td>
     </tr>
 </table>
         <!--<a>https://www.youtube.com/watch?v=KiMtkJw-4gs</a>-->
